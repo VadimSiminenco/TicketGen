@@ -3,3 +3,8 @@ target/
 *.iml
 .vscode/
 journal.xlsx
+students.xlsx
+tickets.docx
+results.xlsx
+.results-*.xlsx
+*.log

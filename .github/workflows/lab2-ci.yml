@@ -1,0 +1,21 @@
+name: Lab 2 CI
+
+on:
+  push:
+    branches: [lab2-ui-tickets]
+  pull_request:
+    branches: [lab2-ui-tickets]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - uses: browser-actions/setup-chrome@v2
+      - name: Verify Java, unit tests and Selenium UI
+        run: mvn -B clean verify
