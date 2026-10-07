@@ -1,7 +1,5 @@
 # TicketGen — лабораторная работа №2
 
-Java 17 web application for assigning exam tickets from Excel and Word sources with persistent Excel history, Selenium tests and GitHub Actions CI.
-
 ![Lab 2 CI](https://github.com/VadimSiminenco/TicketGen/actions/workflows/lab2-ci.yml/badge.svg?branch=lab2-ui-tickets)
 
 ![Главная страница](docs/screenshots/main-page.png)
@@ -93,7 +91,3 @@ java -jar target/lab2/ticketgen.jar --ticketgen.data-directory=C:\data\ticketgen
 Workflow [Lab 2 CI](.github/workflows/lab2-ci.yml) запускает `mvn -B clean verify` на Ubuntu с Temurin 17 и Chrome при push в `lab2-ui-tickets`. Он проверяет и unit, и Selenium-тесты.
 
 Чтобы получать письмо после успешного запуска workflow, владелец репозитория должен открыть [настройки уведомлений GitHub](https://github.com/settings/notifications), в разделе **System → Actions** выбрать **Email** и не включать «Only notify for failed workflows». GitHub отправляет статус завершённого запуска инициатору push; пароль почты в проекте не нужен. См. [документацию GitHub](https://docs.github.com/en/subscriptions-and-notifications/how-tos/managing-github-actions-notifications).
-
-## Для защиты лабораторной
-
-Покажите два листа в `students.xlsx`, один пустой; один недействительный билет с двумя вопросами и два действительных; первую и повторную выдачу одному студенту; две отдельные строки с одним номером в `results.xlsx`; затем откройте журнал в Excel и продемонстрируйте диалог повторной попытки.
